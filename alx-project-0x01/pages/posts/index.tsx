@@ -10,7 +10,9 @@ interface PostsPageProps {
 
 const Posts: React.FC<PostsPageProps> = ({ posts }) => {
   // Store all posts in state for dynamic rendering
-  const [Posts, setPosts] = useState<PostProps[]>(posts);
+   const [post, setPost] = useState<PostData | null>(null);
+  
+  const [allPosts, setAllPosts] = useState<PostProps[]>(posts);
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleAddPost = (newPost: PostData) => {
