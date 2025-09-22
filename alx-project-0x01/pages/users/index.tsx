@@ -1,7 +1,7 @@
 import React from "react";
-import { UserCardProps } from "@/interfaces";
+import { UserProps } from "@/interfaces";
 
-const UserCard: React.FC<UserCardProps> = ({
+const UserCard: React.FC<UserProps> = ({
   name,
   username,
   email,
@@ -38,3 +38,4 @@ const UserCard: React.FC<UserCardProps> = ({
 };
 
 export default UserCard;
+
