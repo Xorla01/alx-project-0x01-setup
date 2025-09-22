@@ -1,6 +1,6 @@
 import PostCard from "@/components/common/PostCard";
 import Header from "@/components/layout/Header";
-import { PostsPageProps, PostProps } from "@/interfaces";
+import { PostProps } from "@/interfaces";
 
 const Posts: React.FC<PostsPageProps> = ({ posts }) => {
   return (
@@ -40,5 +40,6 @@ export async function getStaticProps() {
     }
   }
 }
+
 
 export default Posts;
