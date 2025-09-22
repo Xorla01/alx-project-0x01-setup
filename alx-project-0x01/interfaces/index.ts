@@ -46,14 +46,9 @@ export interface PostModalProps {
 }
 
 export interface UserModalProps {
-    onClose: () => void;
-    onSubmit: (user: {
-    name: string;
-    username: string;
-    email: string;
-    phone: string;
-    website: string;
-  }) => void;
+  isOpen: boolean;
+  onClose: () => void;
+  onSubmit: (post: UserProps) => void;
 }
 
 export interface UserDataProps {
@@ -79,3 +74,4 @@ export interface UserDataProps {
     bs: string;
   };
 }
+
