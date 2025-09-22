@@ -10,12 +10,12 @@ interface PostsPageProps {
 
 const Posts: React.FC<PostsPageProps> = ({ posts }) => {
   // Store all posts in state for dynamic rendering
-  const [allPosts, setAllPosts] = useState<PostProps[]>(posts);
+  const [Posts, setPosts] = useState<PostProps[]>(posts);
   const [isModalOpen, setModalOpen] = useState(false);
 
   const handleAddPost = (newPost: PostData) => {
     // Add the new post dynamically
-    setAllPosts((prev) => [...prev, { ...newPost, id: prev.length + 1 }]);
+    setPosts((prev) => [...prev, { ...newPost, id: prev.length + 1 }]);
     setModalOpen(false); // Close modal after adding post
   };
 
@@ -65,3 +65,4 @@ export async function getStaticProps() {
 }
 
 export default Posts;
+
