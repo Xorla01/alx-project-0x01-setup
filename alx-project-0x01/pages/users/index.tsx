@@ -7,11 +7,12 @@ interface UsersPageProps {
 }
 
 const Users: React.FC<UsersPageProps> = ({ users }) => {
+    const posts = users;
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Users List</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {users.map((user) => (
+        {posts.map((user) => (
           <UserCard key={user.id} {...user} />
         ))}
       </div>
@@ -25,7 +26,7 @@ export default Users;
 // ✅ getStaticProps stays as a named export
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users: UserCardProps[] = await response.json();
+  const users: UserProps[] = await response.json();
 
   return {
     props: {
