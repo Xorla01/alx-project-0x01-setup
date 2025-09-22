@@ -9,7 +9,7 @@ export interface PostsPageProps {
   posts: PostProps[]; 
 }
 
-export interface UserCardProps {
+export interface UserProps {
   id: number;
   name: string;
   username: string;
@@ -32,3 +32,4 @@ export interface UserCardProps {
     bs: string;
   };
 }
+
